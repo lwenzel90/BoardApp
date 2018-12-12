@@ -1,0 +1,23 @@
+{
+  "name": "boardapp",
+  "version": "1.0.0",
+  "description": "Trello Clone ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwenzel90/BoardApp.git"
+  },
+  "author": "Logan Wenzel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lwenzel90/BoardApp/issues"
+  },
+  "homepage": "https://github.com/lwenzel90/BoardApp#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}

@@ -1,14 +1,17 @@
 let express = require("express"),
-    app = express();
+    app = express(),
+    mongoose = require("mongoose"),
+    bodyParser = require("body-parser");
 
-app.set("view engine", "ejs");
-app.use(express.static("public/css"));
-app.use("/cssFiles", express.static(__dirname + "/public/css"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
-
-
+let todoRoutes = require("./routes/todos");
+    
 app.get("/", function(req, res){
-    res.render("boards/index", {user: "Logan"});
+    res.send("Hello from root route");
 });
 
-app.listen(6969, () => { console.log("listening on 6969")});
+app.use("/api/todos", todoRoutes);
+
+app.listen(3000, () => { console.log("listening on 3000")});

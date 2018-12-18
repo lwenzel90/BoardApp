@@ -2,6 +2,61 @@ body{
     background: #eef;
 }
 
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 30px;
+}
+
+input{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #888;
+    height: 1.75rem;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 10px;
+}
+
 #addBoard{
-    
+    width: 300px;
+    background: #fff;
+    box-shadow: 0 0 20px #555;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+}
+#addBoard:hover{
+    animation: createBoardAnimation .2s forwards;
+}
+
+@keyframes createBoardAnimation {
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.cardContainer{
+    width:80%;
+    padding: 10px;
+    margin: 0 auto
+}
+
+.hidden{
+    display: none;;
+}
+
+button{
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.board{
+    width: 300px;
+    align-self: flex-start;
+    background: #fff;
+    box-shadow: 0 0 20px #555;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
 }

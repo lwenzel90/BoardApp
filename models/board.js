@@ -2,8 +2,13 @@ const mongoose = require("mongoose");
 
 const boardSchema = new mongoose.Schema({
     name: {type: String, required: true},
-    todos: {type: Boolean, default: false},
+    todos: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Todo"
+        }
+    ],
     create_data: {type: Date, default: Date.now}
 });
-let Todo = mongoose.model("Todo", todoSchema);
-module.exports = Todo;
+let Board = mongoose.model("Board", boardSchema);
+module.exports = Board;

@@ -1,5 +1,5 @@
 body{
-    background: #eef;
+    background: #dde;
 }
 
 .content{
@@ -8,6 +8,26 @@ body{
     flex-wrap: wrap;
     justify-content: flex-start;
     padding: 30px;
+}
+
+.board{
+    width: 250px;
+    align-self: flex-start;
+    background: #eef;
+    box-shadow: 0 0 20px #555;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    
+}
+
+.board:hover{
+    animation: selectBoard .2s forwards;
+}
+
+@keyframes selectBoard {
+    100%{
+        transform: scale(1.1);
+    }
 }
 
 input{
@@ -21,11 +41,12 @@ input{
 }
 
 #addBoard{
-    width: 300px;
-    background: #fff;
+    /* flex: 0 0 250px;
+    width: 250px;
+    background: #eef;
     box-shadow: 0 0 20px #555;
-    margin-right: 4rem;
-    margin-bottom: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem; */
 }
 #addBoard:hover{
     animation: createBoardAnimation .2s forwards;
@@ -52,11 +73,3 @@ button{
     margin-bottom: 30px;
 }
 
-.board{
-    width: 300px;
-    align-self: flex-start;
-    background: #fff;
-    box-shadow: 0 0 20px #555;
-    margin-right: 4rem;
-    margin-bottom: 2rem;
-}

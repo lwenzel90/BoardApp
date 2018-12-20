@@ -1,14 +1,14 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const boardSchema = new mongoose.Schema({
-    name: {type: String, required: true},
-    todos: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Todo"
-        }
-    ],
-    create_data: {type: Date, default: Date.now}
+  name: { type: String, required: true },
+  lists: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'List',
+    },
+  ],
+  create_data: { type: Date, default: Date.now },
 });
-let Board = mongoose.model("Board", boardSchema);
+const Board = mongoose.model('Board', boardSchema);
 module.exports = Board;

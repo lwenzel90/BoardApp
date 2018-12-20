@@ -1,0 +1,22 @@
+body{
+    background: #dde;
+}
+
+.content{
+    padding: 30px;
+}
+
+.list{
+    background: #eef;
+    width: 250px;
+    box-shadow: 0 0 20px #555;
+    padding: 20px;
+}
+
+.listContainer{
+    padding: 30px;
+}
+
+/* #addList{
+    
+} */
